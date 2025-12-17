@@ -44,7 +44,7 @@ export const Navigation: React.FC = () => {
             }
         `}
         >
-          <Link to="/" className={`text-2xl font-serif tracking-tighter font-bold z-50 transition-colors ${scrolled || isOpen ? 'text-stone-800' : 'text-stone-800 md:text-stone-100 mix-blend-difference'}`}>
+          <Link to="/" className={`text-2xl font-serif tracking-tighter font-bold z-50 transition-colors text-stone-800`}>
             OUR DAY
           </Link>
 
@@ -54,7 +54,7 @@ export const Navigation: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`uppercase text-xs tracking-[0.2em] font-medium hover:text-olive-800 transition-colors relative group ${location.pathname === item.path ? 'text-olive-800' : scrolled ? 'text-stone-800' : 'text-stone-100 mix-blend-difference'
+                className={`uppercase text-xs tracking-[0.2em] font-medium hover:text-olive-800 transition-colors relative group ${location.pathname === item.path ? 'text-olive-800' : 'text-stone-800'
                   }`}
               >
                 {item.label}
@@ -66,10 +66,10 @@ export const Navigation: React.FC = () => {
           {/* Mobile Toggle */}
           <div className="md:hidden z-50">
             <button
-              className={`text-stone-800 focus:outline-none ${scrolled ? '' : 'text-stone-800 md:text-stone-100'}`}
+              className={`text-stone-800 focus:outline-none`}
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} className={scrolled ? 'text-stone-800' : 'text-stone-800 md:text-stone-100'} />}
+              {isOpen ? <X size={24} /> : <Menu size={24} className={'text-stone-800'} />}
             </button>
           </div>
 

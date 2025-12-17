@@ -41,7 +41,6 @@ const AppContent: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col noise-bg-wrapper">
       <CustomCursor />
-      <div className="noise-bg fixed inset-0 z-0 pointer-events-none opacity-[0.03]"></div>
       <Navigation />
       <main className="flex-grow">
         <Routes>
